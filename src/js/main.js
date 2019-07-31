@@ -16,7 +16,24 @@ if ('serviceWorker' in navigator) {
 
 // place your code below
 
+// form handling
 
-console.log(`Hello world!`);
+// 1. Pobieram inputa
+const message = document.querySelector('.form__message--js');
+const save = document.querySelector('.form__button--save-js');
+const load = document.querySelector('.form__button--load-js');
 
+console.log(message);
 
+// 2. wartość zapisuję do Local Storage po kliknięciu na przycisk
+save.addEventListener('click', (e) => {
+  //blokuje domyslne wyslanie formularza, ktore ciagle przeladowuje strone
+  e.preventDefault();
+  localStorage.setItem('message', message.value);
+});
+
+//3. Wartość pobieram z Local Storage po kliknięciu na przycisk
+load.addEventListener('click', (e) => {
+  e.preventDefault();
+  message.value = localStorage.getItem('message');
+});

@@ -11,6 +11,56 @@ html {
 }
 
 body {
-  color: $yellow;
-  background: $violet;
+  align-items: center;
+  background: #fafafc;
+  color: salmon;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
 }
+
+.main {
+  max-width: 544px;
+  width: 100%;
+}
+
+.header {
+  font-weight: 600;
+  font-size: 44px;
+  margin: 0;
+  margin-bottom: 48px;
+}
+
+.form {
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 48px;
+  }
+  &__button {
+
+    border: 1px solid #121232;
+    border-radius: 4px;
+    font-weight: 600;
+    min-width: 200px;
+    padding: 16px 0;
+    &--save {
+      background: #121232;
+      color: white;
+    }
+  }
+  &__label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 8px;
+  }
+  &__message {
+    border: 1px solid #d3d4d8;
+    border-radius: 8px;
+    min-height: 350px;
+    padding: 12px;
+    width: 100%;
+  }
+}
+
+
